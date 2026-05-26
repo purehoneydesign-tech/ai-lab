@@ -395,12 +395,30 @@
     background: var(--accent-dim);
     border: 1px solid var(--accent-border);
     border-radius: 2px;
+    margin-bottom: 8px;
+  }
+  .entry-insight {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px 20px;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 2px;
     margin-bottom: 0;
   }
   .outcome-icon {
     font-family: var(--mono);
     font-size: 14px;
     color: var(--accent);
+    letter-spacing: 0.1em;
+    flex-shrink: 0;
+    padding-top: 2px;
+  }
+  .insight-icon {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text-muted);
     letter-spacing: 0.1em;
     flex-shrink: 0;
     padding-top: 2px;
@@ -416,6 +434,81 @@
     text-transform: uppercase;
     letter-spacing: 0;
   }
+  .outcome-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 6px;
+  }
+  .insight-label {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .outcome-body {
+    font-size: 16px;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* ENTRY IMAGE */
+  .entry-images {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 8px;
+  }
+  .entry-image-thumb {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 2px;
+    border: 1px solid var(--border);
+    cursor: zoom-in;
+    transition: border-color 0.2s, opacity 0.2s;
+    display: block;
+  }
+  .entry-image-thumb:hover {
+    border-color: var(--accent);
+    opacity: 0.85;
+  }
+
+  /* LIGHTBOX */
+  .lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 999;
+    background: rgba(0,0,0,0.92);
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+  }
+  .lightbox.active { display: flex; }
+  .lightbox img {
+    max-width: 90vw;
+    max-height: 88vh;
+    border-radius: 2px;
+    object-fit: contain;
+    box-shadow: 0 0 60px rgba(0,0,0,0.6);
+  }
+  .lightbox-close {
+    position: fixed;
+    top: 24px;
+    right: 32px;
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--text-muted);
+    cursor: pointer;
+    letter-spacing: 0.1em;
+    transition: color 0.2s;
+  }
+  .lightbox-close:hover { color: var(--accent); }
 
   /* TOOLS SECTION */
   .tools-grid {
@@ -548,17 +641,121 @@
   .hero-desc { animation: fadeUp 0.7s ease 0.2s both; }
   .hero-meta { animation: fadeUp 0.7s ease 0.3s both; }
 
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    nav { padding: 16px 24px; }
-    .hero { padding: 120px 24px 80px; }
-    section { padding: 48px 24px; }
-    .entry { grid-template-columns: 1fr; gap: 16px; }
-    .entry-details { grid-template-columns: 1fr; }
-    .tools-grid { grid-template-columns: 1fr; }
+  /* RESPONSIVE — TABLET (max 1024px) */
+  @media (max-width: 1024px) {
+    nav { padding: 18px 32px; }
+    .hero { padding: 130px 32px 72px; }
+    section { padding: 64px 32px; }
     .workflow-steps { grid-template-columns: 1fr 1fr; }
+    .tools-grid { grid-template-columns: 1fr 1fr; }
+    footer { padding: 28px 32px; }
+  }
+
+  /* RESPONSIVE — MOBILE (max 768px) */
+  @media (max-width: 768px) {
+
+    /* NAV */
+    nav {
+      padding: 14px 20px;
+      gap: 0;
+    }
+    .nav-links { display: none; }
+    .nav-logo { font-size: 13px; }
+    .nav-back { font-size: 13px; }
+
+    /* TICKER */
+    .ticker-wrap { padding: 12px 0; }
+    .ticker-item { font-size: 13px; padding: 0 20px; }
+
+    /* HERO */
+    .hero {
+      padding: 100px 20px 56px;
+    }
+    .hero h1 {
+      font-size: clamp(40px, 12vw, 64px);
+      margin-bottom: 16px;
+    }
+    .hero-eyebrow { font-size: 13px; margin-bottom: 16px; }
+    .hero-desc { font-size: 15px; margin-bottom: 28px; }
+    .hero-meta { gap: 20px; }
+    .hero-stat-n { font-size: 22px; }
+    .hero-stat-l { font-size: 13px; }
+    .hero-divider { height: 28px; }
+
+    /* SECTIONS */
+    section { padding: 48px 20px; }
+    .section-title { font-size: clamp(24px, 8vw, 36px); }
+    .section-count { font-size: 13px; }
+    .section-header { margin-bottom: 24px; padding-bottom: 14px; }
+
+    /* ABOUT GRID */
     .about-grid { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 16px; text-align: center; }
+    .about-cell { padding: 24px 20px; }
+    .about-cell-label { font-size: 14px; }
+    .about-cell p { font-size: 15px; }
+
+    /* WORKFLOW STEPS */
+    .workflow-steps { grid-template-columns: 1fr; }
+    .step { padding: 24px 20px; }
+    .step-n { font-size: 13px; }
+    .step-title { font-size: 15px; }
+    .step-desc { font-size: 15px; }
+
+    /* ENTRIES */
+    .entry {
+      grid-template-columns: 1fr;
+      gap: 16px;
+      padding: 24px 20px;
+    }
+    .entry-date-col {
+      flex-direction: row;
+      align-items: center;
+      gap: 12px;
+      padding-top: 0;
+    }
+    .entry-num { font-size: 13px; }
+    .entry-date { font-size: 13px; }
+    .entry-title { font-size: 18px; }
+    .entry-summary { font-size: 15px; }
+    .entry-tags { margin-bottom: 16px; }
+    .tag { font-size: 13px; padding: 3px 8px; }
+
+    .entry-details { grid-template-columns: 1fr; }
+    .detail-cell { padding: 14px 16px; }
+    .detail-label { font-size: 13px; }
+    .detail-val { font-size: 15px; }
+
+    .entry-outcome { padding: 14px 16px; gap: 10px; }
+    .outcome-text { font-size: 15px; }
+    .outcome-icon { font-size: 13px; }
+
+    .entry-placeholder { padding: 24px 20px; }
+    .placeholder-text { font-size: 13px; }
+
+    /* TOOLS */
+    .tools-grid { grid-template-columns: 1fr; }
+    .tool-card { padding: 24px 20px; }
+    .tool-role { font-size: 13px; }
+    .tool-name { font-size: 15px; }
+    .tool-desc { font-size: 15px; }
+
+    /* FOOTER */
+    footer {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+      padding: 24px 20px;
+    }
+    .footer-note { font-size: 13px; }
+    .footer-link { font-size: 13px; }
+  }
+
+  /* RESPONSIVE — SMALL MOBILE (max 375px) */
+  @media (max-width: 375px) {
+    .hero h1 { font-size: 36px; }
+    .hero-meta { flex-direction: column; gap: 16px; align-items: flex-start; }
+    .hero-divider { display: none; }
+    .entry-details { grid-template-columns: 1fr; }
   }
 </style>
 </head>
@@ -567,7 +764,7 @@
 <nav>
   <a class="nav-logo" href="https://www.mariagogoleva.com/">MG / <span>AI Lab</span></a>
   <ul class="nav-links">
-    <li><a href="#entries">Challenges</a></li>
+    <li><a href="#entries">Log</a></li>
     <li><a href="#workflow">Workflow</a></li>
     <li><a href="#tools">Tools</a></li>
   </ul>
@@ -578,23 +775,23 @@
 <div style="padding-top: 61px;">
   <div class="ticker-wrap">
     <div class="ticker-track">
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Building Terra</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Climate Tech</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> AI-Augmented Design</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Shipped in Public</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> JTBD Research</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Figma to Code</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> AI-Assisted Research</span>
       <span class="ticker-item"><span class="ticker-dot">✦</span> Prompt Engineering</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Consumer App</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Design Systems</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Design Critique</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Workflow Experiments</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Component Generation</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> UX Research Synthesis</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Rapid Prototyping</span>
       <!-- duplicate for seamless loop -->
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Building Terra</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Climate Tech</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> AI-Augmented Design</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Shipped in Public</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> JTBD Research</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Figma to Code</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> AI-Assisted Research</span>
       <span class="ticker-item"><span class="ticker-dot">✦</span> Prompt Engineering</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Consumer App</span>
-      <span class="ticker-item"><span class="ticker-dot">✦</span> Design Systems</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Design Critique</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Workflow Experiments</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Component Generation</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> UX Research Synthesis</span>
+      <span class="ticker-item"><span class="ticker-dot">✦</span> Rapid Prototyping</span>
     </div>
   </div>
 </div>
@@ -602,19 +799,19 @@
 <!-- HERO -->
 <div class="hero">
   <p class="hero-eyebrow">AI Workflow Lab</p>
-  <h1>Building Terra,<br><em>in public</em></h1>
+  <h1>Real work,<br><em>honest process.</em></h1>
   <p class="hero-desc">
-    A living record of building Terra — a climate tech app — with AI as a core part of the process. Each entry documents what was built, the decisions made, what worked, and what didn't.
+    A living record of building a product with AI — from strategy to code. Each entry documents what was attempted, how Claude was used, what worked, and what didn't.
   </p>
   <div class="hero-meta">
     <div class="hero-stat">
       <span class="hero-stat-n" id="challenge-count">01</span>
-      <span class="hero-stat-l">Challenges logged</span>
+      <span class="hero-stat-l">Entries logged</span>
     </div>
     <div class="hero-divider"></div>
     <div class="hero-stat">
-      <span class="hero-stat-n">Terra</span>
-      <span class="hero-stat-l">The product</span>
+      <span class="hero-stat-n">Ongoing</span>
+      <span class="hero-stat-l">Cadence</span>
     </div>
     <div class="hero-divider"></div>
     <div class="hero-stat">
@@ -632,19 +829,19 @@
   <div class="about-grid">
     <div class="about-cell">
       <p class="about-cell-label">Purpose</p>
-      <p>I'm building <strong>Terra</strong> — a real climate tech consumer app — using AI as a core part of the design and development process. Not to replace design thinking, but to find exactly where AI creates leverage and where human judgment is irreplaceable. This page is the honest record of that build.</p>
+      <p>I used Claude to brainstorm and shape a product strategy from scratch — then started building. This page documents that process as it happens: the decisions made, the tools used, what AI got right, and where human judgment had to step in.</p>
     </div>
     <div class="about-cell">
       <p class="about-cell-label">What you'll find here</p>
-      <p>Real prompts, real outputs, real critique. Each entry captures <strong>what was built</strong>, the decisions made, what the AI got right and wrong, and what's coming next. No polish — this is the process as it happens.</p>
+      <p>Real prompts, real outputs, real critique. Each entry captures what was being built, the approach taken, key prompt strategies, and a candid reflection on outcomes and surprises.</p>
     </div>
     <div class="about-cell">
       <p class="about-cell-label">Why it matters</p>
-      <p>I'm deliberately moving into <strong>climate tech</strong>, where complex data and expert users are the norm. Terra is the vehicle — a real product, not a portfolio exercise. AI fluency built through actual shipping is a meaningful differentiator. This is how I build it intentionally, not accidentally.</p>
+      <p>AI fluency is becoming a core design skill — not a shortcut, but a new kind of craft. Every build feeds directly into Terra, a product I'm designing in parallel. This log is how I build that fluency intentionally, not accidentally.</p>
     </div>
     <div class="about-cell">
       <p class="about-cell-label">Tools in rotation</p>
-      <p>Claude for reasoning, critique, and code generation. Claude Code in VS Code for building components and pages. Figma as the source of truth. Other tools introduced deliberately — only when a specific gap appears.</p>
+      <p>Claude for reasoning, critique, and code generation. Claude Code in VS Code for building components and pages. Other tools introduced deliberately — only when a specific gap appears.</p>
     </div>
   </div>
 </section>
@@ -653,28 +850,28 @@
 <section id="workflow">
   <div class="section-header">
     <h2 class="section-title">My approach</h2>
-    <span class="section-count">How the build works</span>
+    <span class="section-count">How the process works</span>
   </div>
   <div class="workflow-steps">
     <div class="step">
       <p class="step-n">01 —</p>
-      <p class="step-title">PM first</p>
-      <p class="step-desc">Before any screen gets designed, the problem gets defined. JTBD, competitor research, user assumptions. AI accelerates the research; the thinking is still mine.</p>
+      <p class="step-title">Define the brief</p>
+      <p class="step-desc">One design problem, one focused constraint. Write the brief before opening any tool. Vague inputs produce vague outputs — specificity is the skill.</p>
     </div>
     <div class="step">
       <p class="step-n">02 —</p>
-      <p class="step-title">Build with Claude</p>
-      <p class="step-desc">Design and code happen together. Claude generates HTML/CSS, I critique and iterate. Ship working screens first — Figma comes after, not before.</p>
+      <p class="step-title">Strategise with Claude</p>
+      <p class="step-desc">Use Claude to brainstorm, critique, and shape the approach before building anything. Product direction, IA, component logic — thinking happens here first.</p>
     </div>
     <div class="step">
       <p class="step-n">03 —</p>
-      <p class="step-title">Refine in Figma</p>
-      <p class="step-desc">Built output routes back to Figma for design system compliance, accessibility checks, and variant work. Figma is the source of truth, not the starting point.</p>
+      <p class="step-title">Build with Claude Code</p>
+      <p class="step-desc">Build the component or page directly in Claude Code (VS Code). Ship working HTML/CSS first. Document the real prompts used, not polished ones.</p>
     </div>
     <div class="step">
       <p class="step-n">04 —</p>
-      <p class="step-title">Ship and log</p>
-      <p class="step-desc">Working code gets deployed. Every session gets logged here — what shipped, what broke, what the AI got wrong, and what the next step is.</p>
+      <p class="step-title">Extract the insight</p>
+      <p class="step-desc">One honest takeaway: a prompt pattern worth keeping, a workflow adjustment, or where AI didn't help. Log it. That's the point of this page.</p>
     </div>
   </div>
 </section>
@@ -688,44 +885,6 @@
 
   <div class="entries-list">
 
-    <!-- ENTRY 002 -->
-    <div class="entry">
-      <div class="entry-date-col">
-        <span class="entry-num">#002</span>
-        <span class="entry-date">May 2026</span>
-      </div>
-      <div class="entry-body">
-        <div class="entry-tags">
-          <span class="tag accent">Product Design</span>
-          <span class="tag">Claude</span>
-          <span class="tag">HTML/CSS</span>
-          <span class="tag">Vercel</span>
-        </div>
-        <h3 class="entry-title">Designing and shipping Terra's sign-up flow in one session</h3>
-        <p class="entry-summary">
-          First real build session for Terra. Starting point was an existing sign-up prototype — the work was equal parts design critique, visual system decisions, and iterative building. Established the full colour palette (beige + pine green), botanical visual language, and UX patterns. Went from rough prototype to live deployed product in a single session.
-        </p>
-        <div class="entry-details">
-          <div class="detail-cell">
-            <p class="detail-label">Tool used</p>
-            <p class="detail-val">Claude Sonnet</p>
-          </div>
-          <div class="detail-cell">
-            <p class="detail-label">Type</p>
-            <p class="detail-val">Consumer app / Auth flow</p>
-          </div>
-          <div class="detail-cell">
-            <p class="detail-label">Time to shipped</p>
-            <p class="detail-val">~2 hours</p>
-          </div>
-        </div>
-        <div class="entry-outcome">
-          <span class="outcome-icon">→</span>
-          <p class="outcome-text"><strong>Outcome:</strong> Shipped a live sign-up flow at <a href="https://terra-beige-mu.vercel.app/" target="_blank" style="color: var(--accent); text-decoration: none;">terra-beige-mu.vercel.app</a> — full palette system, paper grain texture, botanical photo as decorative element, back navigation with reverse animation, 3-step progress indicator, and password strength checker. Next: proper repo structure and PM foundations (JTBD, competitor research). Key insight: <strong>sharing a photo reference produced better colour decisions in one round than describing the palette in words across three.</strong></p>
-        </div>
-      </div>
-    </div>
-
     <!-- ENTRY 001 -->
     <div class="entry">
       <div class="entry-date-col">
@@ -737,10 +896,11 @@
           <span class="tag accent">Workflow</span>
           <span class="tag">Claude</span>
           <span class="tag">Portfolio</span>
+          <span class="tag">Friction</span>
         </div>
-        <h3 class="entry-title">Building my AI lab page from scratch with Claude</h3>
+        <h3 class="entry-title">Building the AI lab page — and hitting the limits of Claude in the same session</h3>
         <p class="entry-summary">
-          Challenge: design and build a portfolio sub-page that documents my AI workflow experiments — without opening Figma first. Starting point was a brief description of intent and a link to my existing portfolio. Goal was to ship a visually cohesive, production-ready page that matches my existing aesthetic while solving a real information architecture problem.
+          Starting point: a brief description of intent and a link to my existing portfolio. Goal was to ship a visually cohesive, production-ready page that matches my existing aesthetic while solving a real information architecture problem — without opening Figma first. What followed was also an early lesson in how Claude handles instructions over a long session.
         </p>
         <div class="entry-details">
           <div class="detail-cell">
@@ -748,7 +908,7 @@
             <p class="detail-val">Claude Sonnet</p>
           </div>
           <div class="detail-cell">
-            <p class="detail-label">Challenge type</p>
+            <p class="detail-label">Type</p>
             <p class="detail-val">Page design & IA</p>
           </div>
           <div class="detail-cell">
@@ -757,8 +917,61 @@
           </div>
         </div>
         <div class="entry-outcome">
-          <span class="outcome-icon">→</span>
-          <p class="outcome-text"><strong>Outcome:</strong> Claude fetched the live portfolio URL, extracted the visual language (dark bg, monospace accents, editorial typography), and generated a fully structured HTML page matching the aesthetic. Key insight: <strong>giving Claude a live URL produces dramatically better visual alignment than describing the style in words.</strong> The IA structure also came out cleanly on the first pass because the brief was specific about the content types needed.</p>
+          <div>
+            <p class="outcome-label">Outcome</p>
+            <p class="outcome-body">Claude couldn't reliably extract exact color values or design tokens from the portfolio URL — the page had the right structure but colors were off. Once I defined a proper design system spec and fed it to Claude, alignment improved significantly. Later in the same session, instruction drift became a real problem: earlier rules quietly reverted as the conversation grew longer, creating a repetitive correction loop.</p>
+          </div>
+        </div>
+        <div class="entry-insight">
+          <div>
+            <p class="insight-label">Key insights & challenges</p>
+            <p class="outcome-body">Two lessons from one session. First: Claude approximates visual styles from URLs — define your design system as an explicit spec before asking it to match anything. Second: Claude has no persistent memory within long sessions. The fix is Project Instructions — a persistent system prompt that eliminates re-establishing ground rules each time. Every instruction needs to be written as if it might be the only one Claude ever reads.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ENTRY 002 -->
+    <div class="entry">
+      <div class="entry-date-col">
+        <span class="entry-num">#002</span>
+        <span class="entry-date">May 2026</span>
+      </div>
+      <div class="entry-body">
+        <div class="entry-tags">
+          <span class="tag accent">Infrastructure</span>
+          <span class="tag">GitHub</span>
+          <span class="tag">Vercel</span>
+        </div>
+        <h3 class="entry-title">Setting up Terra's repo and shipping the first live deploy</h3>
+        <p class="entry-summary">
+          Before building features, the foundation needed to exist. This session covered getting the GitHub repo live, connecting it to Vercel, and establishing the deploy workflow. No terminal — everything done through the browser and GitHub Desktop. The goal was simple: a real URL that works on any phone, today.
+        </p>
+        <div class="entry-details">
+          <div class="detail-cell">
+            <p class="detail-label">Tools used</p>
+            <p class="detail-val">GitHub + Vercel</p>
+          </div>
+          <div class="detail-cell">
+            <p class="detail-label">Type</p>
+            <p class="detail-val">Infrastructure / DevOps</p>
+          </div>
+          <div class="detail-cell">
+            <p class="detail-label">Time</p>
+            <p class="detail-val">~45 minutes</p>
+          </div>
+        </div>
+        <div class="entry-outcome">
+          <div>
+            <p class="outcome-label">Outcome</p>
+            <p class="outcome-body">Terra is live at <a href="https://terra-beige-mu.vercel.app" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-border);">terra-beige-mu.vercel.app</a>, deployed from a private GitHub repo via Vercel's automatic deploy on push. The setup was intentionally quick — the goal was to test whether Claude could build a functional sign-up flow from scratch before investing time in proper infrastructure. It can.</p>
+          </div>
+        </div>
+        <div class="entry-insight">
+          <div>
+            <p class="insight-label">Key insights & challenges</p>
+            <p class="outcome-body">Shipping something live — even a bare minimum — changes how seriously you take the next step. Next: set up the app properly with the right repo structure, move the sign-up flow in, and build from a solid foundation.</p>
+          </div>
         </div>
       </div>
     </div>
@@ -766,7 +979,12 @@
     <!-- PLACEHOLDER ENTRIES -->
     <div class="entry-placeholder">
       <div class="placeholder-line"></div>
-      <span class="placeholder-text">#003 — Repo structure + PM foundations</span>
+      <span class="placeholder-text">#003 — Coming soon</span>
+      <div class="placeholder-line"></div>
+    </div>
+    <div class="entry-placeholder" style="border-top: none;">
+      <div class="placeholder-line"></div>
+      <span class="placeholder-text">#004 — In progress</span>
       <div class="placeholder-line"></div>
     </div>
 
@@ -783,7 +1001,7 @@
     <div class="tool-card">
       <p class="tool-role">Reasoning + Critique</p>
       <p class="tool-name">Claude</p>
-      <p class="tool-desc">Design critique, research synthesis, prompt strategy, content generation, and planning. The thinking layer for every challenge.</p>
+      <p class="tool-desc">Design critique, research synthesis, prompt strategy, content generation, and planning. The thinking layer for every session.</p>
     </div>
     <div class="tool-card">
       <p class="tool-role">Building + Code</p>
@@ -791,14 +1009,14 @@
       <p class="tool-desc">Component and page generation in VS Code. The build step comes before Figma — code first, canvas second. Skills taught here compound across every future session.</p>
     </div>
     <div class="tool-card">
-      <p class="tool-role">Source of Truth</p>
-      <p class="tool-name">Figma</p>
-      <p class="tool-desc">All Claude Code output routes back to Figma for refinement, design system compliance, accessibility checks, and handoff-ready specs.</p>
-    </div>
-    <div class="tool-card">
       <p class="tool-role">Hosting + Deploy</p>
       <p class="tool-name">Vercel</p>
       <p class="tool-desc">Every session ends with a live deploy. Vercel connects to GitHub and ships in seconds — no build step, no friction between building and seeing it live.</p>
+    </div>
+    <div class="tool-card" style="opacity: 0.45;">
+      <p class="tool-role">Source of Truth — Queued</p>
+      <p class="tool-name">Figma</p>
+      <p class="tool-desc">Will become the source of truth once a functioning product MVP exists. Design system, component library, and handoff specs live here — but only when there's something worth systematising.</p>
     </div>
     <div class="tool-card" style="opacity: 0.45;">
       <p class="tool-role">UI Iteration — Queued</p>
@@ -814,14 +1032,43 @@
 </section>
 
 <footer>
-  <span class="footer-note">© 2026 Maria Gogoleva — Updated as Terra is built</span>
+  <span class="footer-note">© 2026 Maria Gogoleva</span>
   <a class="footer-link" href="https://www.mariagogoleva.com/">← Back to portfolio</a>
 </footer>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <span class="lightbox-close" id="lightbox-close">✕ Close</span>
+  <img src="" id="lightbox-img" alt="Expanded entry image">
+</div>
 
 <script>
   const entries = document.querySelectorAll('.entry[class="entry"]').length;
   const count = document.getElementById('challenge-count');
   if (count) count.textContent = String(entries).padStart(2, '0');
+
+  // Lightbox
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  document.querySelectorAll('.entry-image-thumb').forEach(img => {
+    img.addEventListener('click', () => {
+      lightboxImg.src = img.src;
+      lightboxImg.alt = img.alt;
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  function closeLightbox() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  lightbox.addEventListener('click', closeLightbox);
+  lightboxClose.addEventListener('click', closeLightbox);
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
 </script>
 
 </body>
