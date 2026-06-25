@@ -891,6 +891,58 @@
 
   <div class="entries-list">
 
+    <!-- ENTRY 005 — newest -->
+    <article class="log-entry" data-state="closed">
+      <div class="log-entry__meta">
+        <span class="log-entry__num">#005</span>
+        <span class="log-entry__date-val">June 2026</span>
+      </div>
+      <button class="log-entry__toggle-mobile log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+      <div class="log-entry__content">
+        <div class="log-entry__desktop-bar">
+          <div class="log-entry__tags-row">
+            <span class="tag accent">Strategy</span>
+            <span class="tag">Terra</span>
+            <span class="tag">Claude</span>
+            <span class="tag">Product Thinking</span>
+          </div>
+          <button class="log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+        </div>
+        <div class="log-entry__mobile-tags">
+          <span class="tag accent">Strategy</span>
+          <span class="tag">Terra</span>
+          <span class="tag">Claude</span>
+          <span class="tag">Product Thinking</span>
+        </div>
+        <h3 class="log-entry__title">From blank slate to product strategy — user research, competitive analysis, JTBD, and MVP scope</h3>
+        <div class="log-entry__body">
+          <p class="log-entry__summary">Before writing a line of code or opening Figma, this session was dedicated entirely to product thinking. Using Claude as a strategic thinking partner, I ran a full PM workstream: defined positioning, conducted competitive analysis across an existing product category, synthesised qualitative user research from five interviews, mapped Jobs To Be Done across core use cases, and locked MVP scope. The goal was to build the right thing before building fast.</p>
+          <div class="log-entry__details">
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Tools used</p>
+              <p class="log-entry__detail-val">Claude</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Type</p>
+              <p class="log-entry__detail-val">Strategy / Product Thinking</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Time</p>
+              <p class="log-entry__detail-val">~3 sessions across multiple days</p>
+            </div>
+          </div>
+          <div class="log-entry__outcome">
+            <p class="log-entry__outcome-label">Outcome</p>
+            <p class="log-entry__outcome-text">The core product decisions — MVP scope, login strategy, and overall flow — came from my own judgment, with Claude helping pressure-test and articulate the thinking. Where Claude added most value was in the research synthesis: two participants independently described the same failure pattern in different contexts, which became a hard content rule; one participant had deleted a comparable app for low utility, which sharpened the first-session brief considerably. The most unexpected insight came from a bias Claude introduced without flagging — it assumed gender for participants whose pronouns were never stated in the transcripts. When caught, the same assumption had been made across multiple users. For a product designed to be non-judgmental and inclusive, it was a useful reminder: AI makes demographic assumptions quietly and confidently, and human oversight isn't just a quality check — it's an inclusivity check.</p>
+          </div>
+          <div class="log-entry__insights">
+            <p class="log-entry__insights-label">Key insights &amp; challenges</p>
+            <p class="log-entry__insights-text">Claude is a strong strategic thinking partner when given specific constraints and pushed back on. The most valuable dynamic wasn't Claude generating answers — it was Claude surfacing assumptions I hadn't examined. Several product decisions came directly from that pressure: drop account creation from MVP entirely; make every recommendation source-backed to address the trust problem users named explicitly; design for two distinct use modes — a first-session browse that builds a mental library, and a return-session lookup that serves users standing in a store mid-decision.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- ENTRY 004 — newest -->
     <article class="log-entry" data-state="closed">
       <div class="log-entry__meta">
@@ -1160,9 +1212,9 @@
   const count = document.getElementById('challenge-count');
   if (count) count.textContent = String(document.querySelectorAll('.log-entry').length).padStart(2, '0');
 
-  // Expand last 3 entries by default
+  // Expand newest 3 entries by default (first 3 in DOM = newest)
   const allEntries = Array.from(document.querySelectorAll('.log-entry'));
-  allEntries.slice(-3).forEach(entry => {
+  allEntries.slice(0, 3).forEach(entry => {
     entry.dataset.state = 'open';
     entry.querySelectorAll('.log-entry__toggle-btn').forEach(b => {
       b.textContent = '- Collapse';
