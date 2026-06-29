@@ -891,6 +891,60 @@
 
   <div class="entries-list">
 
+    <!-- ENTRY 006 — newest -->
+    <article class="log-entry" data-state="closed">
+      <div class="log-entry__meta">
+        <span class="log-entry__num">#006</span>
+        <span class="log-entry__date-val">June 2026</span>
+      </div>
+      <button class="log-entry__toggle-mobile log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+      <div class="log-entry__content">
+        <div class="log-entry__desktop-bar">
+          <div class="log-entry__tags-row">
+            <span class="tag accent">Workflow</span>
+            <span class="tag">Claude</span>
+            <span class="tag">Claude Code</span>
+            <span class="tag">Skills</span>
+            <span class="tag">Tooling</span>
+          </div>
+          <button class="log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+        </div>
+        <div class="log-entry__mobile-tags">
+          <span class="tag accent">Workflow</span>
+          <span class="tag">Claude</span>
+          <span class="tag">Claude Code</span>
+          <span class="tag">Skills</span>
+          <span class="tag">Tooling</span>
+        </div>
+        <h3 class="log-entry__title">Teaching Claude to remember — setting up Project Instructions and Claude Code skills</h3>
+        <div class="log-entry__body">
+          <p class="log-entry__summary">This session covered setting up Project Instructions in Claude.ai — a persistent system prompt that carries context across every conversation — and writing four Claude Code skill files that load design system rules, accessibility standards, UX practices, and a security audit checklist directly into the build environment.</p>
+          <div class="log-entry__details">
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Tools used</p>
+              <p class="log-entry__detail-val">Claude, Claude Code</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Type</p>
+              <p class="log-entry__detail-val">Workflow setup</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Time</p>
+              <p class="log-entry__detail-val">~2 hours</p>
+            </div>
+          </div>
+          <div class="log-entry__outcome">
+            <p class="log-entry__outcome-label">Outcome</p>
+            <p class="log-entry__outcome-text">Project Instructions now hold full context: design system spec, tool stack, workflow split between Claude.ai and Claude Code, friction rules, and a running build log. Claude Code has four skill files in a dedicated <code style="font-family: var(--mono); font-size: 14px;">skills/</code> folder, each with YAML frontmatter that defines when it should trigger. The result is a session that starts informed rather than blank — no re-establishing ground rules, no re-pasting the design system.</p>
+          </div>
+          <div class="log-entry__insights">
+            <p class="log-entry__insights-label">Key insights &amp; challenges</p>
+            <p class="log-entry__insights-text">The two memory systems work completely differently and that distinction matters. Project Instructions in Claude.ai are conversational — Claude reads them silently and applies them throughout the chat. Claude Code skills are more like reference documents you explicitly invoke at the start of a session. Neither is automatic in the way you'd want: Project Instructions still drift in long sessions, and Claude Code skills still need to be called by name. The real insight is that these tools shift the burden from memory to discipline — you still have to write the rules clearly and invoke them consistently. The upfront investment is worth it, but it doesn't eliminate the need for human oversight in every session.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- ENTRY 005 — newest -->
     <article class="log-entry" data-state="closed">
       <div class="log-entry__meta">
