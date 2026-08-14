@@ -807,7 +807,7 @@
   <p class="hero-eyebrow">AI Workflow Lab</p>
   <h1>Real work,<br><em>honest process.</em></h1>
   <p class="hero-desc">
-    A living record of building a product with AI — from strategy to code. Each entry documents what was attempted, how Claude was used, what worked, and what didn't.
+    A living record of building a product with AI — from strategy to code. Each entry documents what was attempted, how AI tools were used, what worked, and what didn't.
   </p>
   <div class="hero-meta">
     <div class="hero-stat">
@@ -835,7 +835,7 @@
   <div class="about-grid">
     <div class="about-cell">
       <p class="about-cell-label">Purpose</p>
-      <p>I used Claude to brainstorm and shape a product strategy from scratch — then started building. This page documents that process as it happens: the decisions made, the tools used, what AI got right, and where human judgment had to step in.</p>
+      <p>Integrating AI into real product work — not in theory, not in tutorials. What actually works, what quietly fails, and what's still missing. Documented in public because the honest version is more useful than the polished one.</p>
     </div>
     <div class="about-cell">
       <p class="about-cell-label">What you'll find here</p>
@@ -843,11 +843,11 @@
     </div>
     <div class="about-cell">
       <p class="about-cell-label">Why it matters</p>
-      <p>AI fluency is becoming a core design skill — not a shortcut, but a new kind of craft. Every build feeds directly into Terra, a product I'm designing in parallel. This log is how I build that fluency intentionally, not accidentally.</p>
+      <p>AI fluency is becoming a core design skill — not a shortcut, but a new kind of craft. This log is how I build that fluency intentionally, one session at a time.</p>
     </div>
     <div class="about-cell">
       <p class="about-cell-label">Tools in rotation</p>
-      <p>Claude for reasoning, critique, and code generation. Claude Code in VS Code for building components and pages. Figma for design decisions and visual logic — connected to Claude Code via MCP. Other tools introduced deliberately — only when a specific gap appears.</p>
+      <p>Claude and Perplexity for strategy and research — used together before anything gets built. Claude Code in VS Code for implementation. Figma as a design intervention when visual judgment is needed. Other tools introduced only when a specific gap appears.</p>
     </div>
   </div>
 </section>
@@ -861,18 +861,18 @@
   <div class="workflow-steps">
     <div class="step">
       <p class="step-n">01 —</p>
-      <p class="step-title">Define the brief</p>
-      <p class="step-desc">One design problem, one focused constraint. Write the brief before opening any tool. Vague inputs produce vague outputs — specificity is the skill.</p>
+      <p class="step-title">Identify what matters</p>
+      <p class="step-desc">Figure out what's worth building next — whether that's a product decision, a content question, or a business problem.</p>
     </div>
     <div class="step">
       <p class="step-n">02 —</p>
-      <p class="step-title">Strategise with Claude</p>
-      <p class="step-desc">Use Claude to brainstorm, critique, and shape the approach before building anything. Product direction, IA, component logic — thinking happens here first.</p>
+      <p class="step-title">Strategise and research</p>
+      <p class="step-desc">Claude for reasoning, critique, and shaping direction. Perplexity for deep research — sourcing claims, exploring categories, advising on business decisions. Both used together before anything gets built.</p>
     </div>
     <div class="step">
       <p class="step-n">03 —</p>
       <p class="step-title">Build with Claude Code</p>
-      <p class="step-desc">Build the component or page directly in Claude Code (VS Code). Ship working HTML/CSS first. Document the real prompts used, not polished ones.</p>
+      <p class="step-desc">Specify what's needed and let Claude Code handle the implementation — in VS Code, reading Figma designs via MCP. Figma steps in when visual judgment is needed.</p>
     </div>
     <div class="step">
       <p class="step-n">04 —</p>
@@ -891,10 +891,58 @@
 
   <div class="entries-list">
 
-    <!-- ENTRY 007 — newest -->
+    <!-- ENTRY 009 — newest -->
     <article class="log-entry" data-state="closed">
       <div class="log-entry__meta">
-        <span class="log-entry__num">#007</span>
+        <span class="log-entry__num">#009</span>
+        <span class="log-entry__date-val">August 2026</span>
+      </div>
+      <button class="log-entry__toggle-mobile log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+      <div class="log-entry__content">
+        <div class="log-entry__desktop-bar">
+          <div class="log-entry__tags-row">
+            <span class="tag accent">UI Refinement</span>
+            <span class="tag">Infrastructure</span>
+          </div>
+          <button class="log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+        </div>
+        <div class="log-entry__mobile-tags">
+          <span class="tag accent">UI Refinement</span>
+          <span class="tag">Infrastructure</span>
+        </div>
+        <h3 class="log-entry__title">UI refinement and preparing the codebase to scale</h3>
+        <div class="log-entry__body">
+          <p class="log-entry__summary">The codebase needed cleaning up and the UI needed fixing. Claude Code had introduced elements not in Figma and drifted from the defined design — caught only after testing on a real phone. Both tracks ran in parallel: code quality and real-device UI corrections.</p>
+          <div class="log-entry__details">
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Tools used</p>
+              <p class="log-entry__detail-val">Claude, Claude Code, Figma, Vercel, GitHub Desktop</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Type</p>
+              <p class="log-entry__detail-val">UI Refinement / Infrastructure</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Time</p>
+              <p class="log-entry__detail-val">~4 hours across multiple sessions</p>
+            </div>
+          </div>
+          <div class="log-entry__outcome">
+            <p class="log-entry__outcome-label">Outcome</p>
+            <p class="log-entry__outcome-text">UI corrected for mobile. Claude Code's unsanctioned additions removed or aligned to Figma. Codebase cleaned — dead code removed, components consolidated, accessibility and security passes done, README updated. Additional skills installed for the cleanup made the process more systematic. Vercel Analytics integration ready to add.</p>
+          </div>
+          <div class="log-entry__insights">
+            <p class="log-entry__insights-label">Key insights &amp; challenges</p>
+            <p class="log-entry__insights-text">Claude Code doesn't always follow the design — it fills gaps with its own judgment. Real-device testing caught things a browser preview missed. AI output needs to be checked against two sources of truth: the design file and the actual device. Installing dedicated skills for the cleanup session made a noticeable difference in how systematically Claude Code approached the work.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTRY 008 -->
+    <article class="log-entry" data-state="closed">
+      <div class="log-entry__meta">
+        <span class="log-entry__num">#008</span>
         <span class="log-entry__date-val">July 2026</span>
       </div>
       <button class="log-entry__toggle-mobile log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
@@ -914,9 +962,9 @@
           <span class="tag">Figma</span>
           <span class="tag">Next.js</span>
         </div>
-        <h3 class="log-entry__title">Building a full content system and visual identity — from prototype to near-MVP</h3>
+        <h3 class="log-entry__title">From prototype to near-MVP</h3>
         <div class="log-entry__body">
-          <p class="log-entry__summary">Started with a connected HTML prototype to validate navigation across multiple screen levels before writing any React. Once the structure felt right, moved into Next.js to build the full page architecture, component system, and content layer. In parallel, ran a full visual identity exploration — new colour palette, serif typography, photographic texture — iterating in the prototype before committing to code.</p>
+          <p class="log-entry__summary">With the content structure defined and an HTML prototype as reference, Claude Code built out the full app — all pages, components, and content layer. The visual identity was explored and resolved in parallel: new colour palette, serif typography, photographic texture. By this point the project had shifted: this was no longer just a portfolio piece but something worth turning into a real business.</p>
           <div class="log-entry__details">
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Tools used</p>
@@ -933,17 +981,69 @@
           </div>
           <div class="log-entry__outcome">
             <p class="log-entry__outcome-label">Outcome</p>
-            <p class="log-entry__outcome-text">The app is now functional and content-complete — all screens built and connected, full content across every category and detail page, verified sources where they exist, and a resolved visual identity that holds across the whole product. What remains before launch is real authentication and user testing.</p>
+            <p class="log-entry__outcome-text">The app is now functional and content-complete — all screens built and connected, full content across every category and detail page, verified sources throughout, and a resolved visual identity that holds across the whole product. What remains before launch is real authentication and user testing.</p>
           </div>
           <div class="log-entry__insights">
             <p class="log-entry__insights-label">Key insights &amp; challenges</p>
-            <p class="log-entry__insights-text">Claude produced a good enough first prototype to validate structure, but bringing the visual quality to the level the product needed required moving into Figma and rebuilding from scratch — proper spacing, considered typography hierarchy, refined colour application. Once the designs were solid, Figma MCP in Claude Code implemented them with full accuracy. The workflow is now clear: Claude for speed and structure, Figma for quality, Claude Code via MCP for precise implementation.</p>
+            <p class="log-entry__insights-text">Claude produced a good enough first prototype to validate structure, but bringing the visual quality to where it needed to be required moving into Figma and rebuilding from scratch — proper spacing, considered typography hierarchy, refined colour application. Once the designs were solid, Figma MCP in Claude Code implemented them with full accuracy. The workflow is now clear: Claude for speed and structure, Figma for quality, Claude Code via MCP for precise implementation.</p>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- ENTRY 006 — newest -->
+    <!-- ENTRY 007 -->
+    <article class="log-entry" data-state="closed">
+      <div class="log-entry__meta">
+        <span class="log-entry__num">#007</span>
+        <span class="log-entry__date-val">June–July 2026</span>
+      </div>
+      <button class="log-entry__toggle-mobile log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+      <div class="log-entry__content">
+        <div class="log-entry__desktop-bar">
+          <div class="log-entry__tags-row">
+            <span class="tag accent">Content Strategy</span>
+            <span class="tag">Claude</span>
+            <span class="tag">Perplexity</span>
+            <span class="tag">Notion</span>
+          </div>
+          <button class="log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+        </div>
+        <div class="log-entry__mobile-tags">
+          <span class="tag accent">Content Strategy</span>
+          <span class="tag">Claude</span>
+          <span class="tag">Perplexity</span>
+          <span class="tag">Notion</span>
+        </div>
+        <h3 class="log-entry__title">Writing and structuring the full app content — before a single component was built</h3>
+        <div class="log-entry__body">
+          <p class="log-entry__summary">With strategy locked, the next layer was content. I used Perplexity for deep research across every category, then Claude to refine the tone and voice of the content. Notion was connected as a live wiki — both tools feeding into it as decisions evolved. I also built a quick HTML prototype in Claude to understand how the content might be laid out before committing to components. Claude helped structure the content architecture and translate rough thinking into a coherent system.</p>
+          <div class="log-entry__details">
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Tools used</p>
+              <p class="log-entry__detail-val">Claude, Perplexity, Notion</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Type</p>
+              <p class="log-entry__detail-val">Content Strategy / Content Writing</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Time</p>
+              <p class="log-entry__detail-val">Multiple sessions across several weeks</p>
+            </div>
+          </div>
+          <div class="log-entry__outcome">
+            <p class="log-entry__outcome-label">Outcome</p>
+            <p class="log-entry__outcome-text">Full content written and structured for all MVP categories. Every recommendation follows a consistent field structure. A three-layer content hierarchy was established to balance depth with scannability. Notion became the central wiki — research, strategy, and content decisions all in one place, updated in real time.</p>
+          </div>
+          <div class="log-entry__insights">
+            <p class="log-entry__insights-label">Key insights &amp; challenges</p>
+            <p class="log-entry__insights-text">Sourcing was the harder constraint. Every claim needed either a verified institutional source or an honest label admitting it wasn't. Claude produced plausible-sounding URLs that didn't exist, cited figures without traceable origins, and referenced documents that didn't say what was claimed. Catching these required verifying every link manually — slower, but the only thing that makes the product's trust positioning credible.<br><br>One prompt pattern worth keeping: asking Claude to audit its own content for sourcing issues before finalising. It caught several of its own fabrications when prompted to look — which raises the question of why it didn't flag them unprompted.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTRY 006 -->
     <article class="log-entry" data-state="closed">
       <div class="log-entry__meta">
         <span class="log-entry__num">#006</span>
@@ -970,7 +1070,7 @@
         </div>
         <h3 class="log-entry__title">Teaching Claude to remember — setting up Project Instructions and Claude Code skills</h3>
         <div class="log-entry__body">
-          <p class="log-entry__summary">This session covered setting up Project Instructions in Claude.ai — a persistent system prompt that carries context across every conversation — and writing four Claude Code skill files that load design system rules, accessibility standards, UX practices, and a security audit checklist directly into the build environment.</p>
+          <p class="log-entry__summary">Two different memory systems, one shared goal: stop re-explaining the same things every session. Project Instructions in Claude.ai for persistent context across conversations. Four Claude Code skill files — design system, accessibility, UX practices, security audit — saved locally and loaded at the start of each build session.</p>
           <div class="log-entry__details">
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Tools used</p>
@@ -987,17 +1087,17 @@
           </div>
           <div class="log-entry__outcome">
             <p class="log-entry__outcome-label">Outcome</p>
-            <p class="log-entry__outcome-text">Project Instructions now hold full context: design system spec, tool stack, workflow split between Claude.ai and Claude Code, friction rules, and a running build log. Claude Code has four skill files in a dedicated <code style="font-family: var(--mono); font-size: 14px;">skills/</code> folder, each with YAML frontmatter that defines when it should trigger. The result is a session that starts informed rather than blank — no re-establishing ground rules, no re-pasting the design system.</p>
+            <p class="log-entry__outcome-text">Sessions now start informed rather than blank. Project Instructions hold the full context — design system, tool stack, workflow rules. Claude Code skill files load the right rules for each task without re-pasting anything.</p>
           </div>
           <div class="log-entry__insights">
             <p class="log-entry__insights-label">Key insights &amp; challenges</p>
-            <p class="log-entry__insights-text">The two memory systems work completely differently and that distinction matters. Project Instructions in Claude.ai are conversational — Claude reads them silently and applies them throughout the chat. Claude Code skills are more like reference documents you explicitly invoke at the start of a session. Neither is automatic in the way you'd want: Project Instructions still drift in long sessions, and Claude Code skills still need to be called by name. The real insight is that these tools shift the burden from memory to discipline — you still have to write the rules clearly and invoke them consistently. The upfront investment is worth it, but it doesn't eliminate the need for human oversight in every session.</p>
+            <p class="log-entry__insights-text">The two memory systems work completely differently. Project Instructions in Claude.ai are conversational — Claude reads them silently and applies them throughout the chat. Claude Code skills are reference documents you explicitly invoke at the start of a session. Neither is automatic in the way you'd want: Project Instructions still drift in long sessions, and Claude Code skills still need to be called by name. These tools shift the burden from memory to discipline — you still have to write the rules clearly and invoke them consistently.</p>
           </div>
         </div>
       </div>
     </article>
 
-    <!-- ENTRY 005 — newest -->
+    <!-- ENTRY 005 -->
     <article class="log-entry" data-state="closed">
       <div class="log-entry__meta">
         <span class="log-entry__num">#005</span>
@@ -1008,7 +1108,6 @@
         <div class="log-entry__desktop-bar">
           <div class="log-entry__tags-row">
             <span class="tag accent">Strategy</span>
-            <span class="tag">Terra</span>
             <span class="tag">Claude</span>
             <span class="tag">Product Thinking</span>
           </div>
@@ -1016,13 +1115,12 @@
         </div>
         <div class="log-entry__mobile-tags">
           <span class="tag accent">Strategy</span>
-          <span class="tag">Terra</span>
           <span class="tag">Claude</span>
           <span class="tag">Product Thinking</span>
         </div>
         <h3 class="log-entry__title">From blank slate to product strategy — user research, competitive analysis, JTBD, and MVP scope</h3>
         <div class="log-entry__body">
-          <p class="log-entry__summary">Using Claude as a strategic thinking partner, I ran a full PM workstream: defined positioning, conducted competitive analysis across an existing product category, synthesised qualitative user research from five interviews, mapped Jobs To Be Done across core use cases, and locked MVP scope. The goal was to build the right thing before building fast.</p>
+          <p class="log-entry__summary">Using Claude as a strategic thinking partner, I ran a full PM workstream: defined positioning, conducted competitive analysis across an existing product category, synthesised qualitative user research from seven interviews, mapped Jobs To Be Done across core use cases, and locked MVP scope. The goal was to build the right thing before building fast.</p>
           <div class="log-entry__details">
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Tools used</p>
@@ -1039,7 +1137,7 @@
           </div>
           <div class="log-entry__outcome">
             <p class="log-entry__outcome-label">Outcome</p>
-            <p class="log-entry__outcome-text">The core product decisions — MVP scope, login strategy, and overall flow — came from my own judgment, with Claude helping pressure-test and articulate the thinking. Where Claude added most value was in the research synthesis: two participants independently described the same failure pattern in different contexts, which became a hard content rule; one participant had deleted a comparable app for low utility, which sharpened the first-session brief considerably.</p>
+            <p class="log-entry__outcome-text">The core product decisions — MVP scope, login strategy, and overall flow — came from my own judgment, with Claude helping pressure-test and articulate the thinking. Where Claude added most value was in research synthesis: two participants independently described the same failure pattern in different contexts, which became a hard content rule; one participant had deleted a comparable app for low utility, which sharpened the first-session brief considerably.</p>
           </div>
           <div class="log-entry__insights">
             <p class="log-entry__insights-label">Key insights &amp; challenges</p>
@@ -1049,7 +1147,7 @@
       </div>
     </article>
 
-    <!-- ENTRY 004 — newest -->
+    <!-- ENTRY 004 -->
     <article class="log-entry" data-state="closed">
       <div class="log-entry__meta">
         <span class="log-entry__num">#004</span>
@@ -1076,7 +1174,7 @@
         </div>
         <h3 class="log-entry__title">Iterating on the AI Lab page — design system, Figma MCP, and where Claude falls short visually</h3>
         <div class="log-entry__body">
-          <p class="log-entry__summary">A full refinement session on the AI Lab page — typography scale, spacing, copy tone, responsive layout, entry structure, and collapsible log entries. The session also established the full workflow going forward: Claude Code in VS Code reads Figma designs via MCP, generates components, and those components get integrated into the live page. The gap between that ideal and reality surfaced quickly.</p>
+          <p class="log-entry__summary">A full refinement session on the AI Lab page — typography scale, spacing, copy tone, responsive layout, entry structure, and collapsible log entries. The session also established the workflow going forward: Claude Code in VS Code reads Figma designs via MCP, generates components, and those components get integrated into the live page.</p>
           <div class="log-entry__details">
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Tools used</p>
@@ -1097,7 +1195,7 @@
           </div>
           <div class="log-entry__insights">
             <p class="log-entry__insights-label">Key insights &amp; challenges</p>
-            <p class="log-entry__insights-text">Claude lacks visual design judgment. The expand/collapse functionality it generated was structurally correct but visually wrong — the interaction felt broken and the collapsed state unpolished. I had to open Figma and draft how I actually wanted it to look. To bring the HTML into Figma I tried two tools: Magic Patterns (did not import files or add autolayout) and html.to.design plugin (converted the HTML into a proper Figma file with styles, components, and autolayout — this worked). Claude is strong at structure and logic, weak at visual feel. Figma remains the right place to make visual decisions, even when working code-first.</p>
+            <p class="log-entry__insights-text">Claude lacks visual design judgment. The expand/collapse functionality it generated was structurally correct but visually wrong. I had to open Figma and draft how I actually wanted it to look. To bring the HTML into Figma I tried two tools: Magic Patterns (did not import files or add autolayout) and html.to.design plugin (converted the HTML into a proper Figma file with styles, components, and autolayout — this worked). Claude is strong at structure and logic, weak at visual feel. Figma remains the right place to make visual decisions, even when working code-first.</p>
           </div>
         </div>
       </div>
@@ -1114,7 +1212,6 @@
         <div class="log-entry__desktop-bar">
           <div class="log-entry__tags-row">
             <span class="tag accent">Infrastructure</span>
-            <span class="tag">Terra</span>
             <span class="tag">Next.js</span>
             <span class="tag">Vercel</span>
             <span class="tag">Claude Code</span>
@@ -1123,18 +1220,17 @@
         </div>
         <div class="log-entry__mobile-tags">
           <span class="tag accent">Infrastructure</span>
-          <span class="tag">Terra</span>
           <span class="tag">Next.js</span>
           <span class="tag">Vercel</span>
           <span class="tag">Claude Code</span>
         </div>
-        <h3 class="log-entry__title">Migrating Terra to Next.js — proper infrastructure, live in 1.5 hours</h3>
+        <h3 class="log-entry__title">Migrating to proper infrastructure — Claude recommended Next.js and that's what we built</h3>
         <div class="log-entry__body">
-          <p class="log-entry__summary">The single HTML file had served its purpose — validate the design before investing in infrastructure. This session migrated the Terra signup flow into a proper Next.js app: structured folders, React components, CSS modules, and design tokens extracted to a shared file. Connected to GitHub, configured Vercel, promoted to production.</p>
+          <p class="log-entry__summary">Once it was clear that Claude Code could build a real product, the single HTML file wasn't going to cut it. I wanted proper infrastructure before going further. I described what I needed — a scalable structure, clean component separation, shared design tokens — and Claude recommended migrating to Next.js. Claude Code handled the implementation.</p>
           <div class="log-entry__details">
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Tools used</p>
-              <p class="log-entry__detail-val">Next.js, Claude Code, GitHub, Vercel</p>
+              <p class="log-entry__detail-val">Claude, Claude Code, Next.js, GitHub, Vercel</p>
             </div>
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Type</p>
@@ -1147,11 +1243,11 @@
           </div>
           <div class="log-entry__outcome">
             <p class="log-entry__outcome-label">Outcome</p>
-            <p class="log-entry__outcome-text">Terra is live at <a href="https://terra-beige-mu.vercel.app/signup" target="_blank">terra-beige-mu.vercel.app/signup</a> — Next.js, proper folder structure, design tokens in a single tokens.css, image assets in public/images. Claude made Next.js accessible without deep technical knowledge — setup that would normally require long documentation happened conversationally, with each error explained and fixed in context.</p>
+            <p class="log-entry__outcome-text">Proper Next.js app structure — organised folders, React components, CSS modules, design tokens in a single <code style="font-family: var(--mono); font-size: 14px;">tokens.css</code>. Connected to GitHub and live on Vercel. Each error Claude Code encountered was explained in plain language and fixed in context — no documentation required.</p>
           </div>
           <div class="log-entry__insights">
             <p class="log-entry__insights-label">Key insights &amp; challenges</p>
-            <p class="log-entry__insights-text">The hardest part was the tooling. Git branch mismatch (master vs main), wrong Vercel framework preset causing 404s that looked like code errors, CSS module imports that work differently in Next.js, file management without terminal knowledge, image format mismatches (.jpg vs .png). Each a 2-minute fix once diagnosed — the hard part is knowing where to look. Structure first pays off immediately: tokens in one place, components in their own files is already cleaner than a single HTML approach.</p>
+            <p class="log-entry__insights-text">The hardest part wasn't the code — it was the tooling. Git branch mismatch, wrong Vercel framework preset, CSS module rules that work differently in Next.js. Each a 2-minute fix once diagnosed, but invisible without knowing where to look. The bigger point: I didn't choose Next.js, Claude recommended it based on what I described needing. That dynamic — describing intent and letting Claude suggest the approach — is more useful than asking for specific technologies you don't fully understand yet.</p>
           </div>
         </div>
       </div>
@@ -1178,17 +1274,17 @@
           <span class="tag">GitHub</span>
           <span class="tag">Vercel</span>
         </div>
-        <h3 class="log-entry__title">Setting up Terra's repo and shipping the first live deploy</h3>
+        <h3 class="log-entry__title">Starting the product — testing Claude Code with a simple HTML build before committing to anything</h3>
         <div class="log-entry__body">
-          <p class="log-entry__summary">Before building features, the foundation needed to exist. This session covered getting the GitHub repo live, connecting it to Vercel, and establishing the deploy workflow. No terminal — everything done through the browser and GitHub Desktop. The goal was simple: a real URL that works on any phone, today.</p>
+          <p class="log-entry__summary">With the log in place, the next step was to actually start building. I had a product idea in mind and wanted to see what Claude Code was capable of before investing in proper infrastructure. So we started simple — a single HTML file, just to test the waters. I asked Claude to help set up the foundation for the app, and it recommended GitHub and Vercel for hosting and deployment. Coming from a non-technical background, I had no idea this combination existed, let alone that it could be set up in under an hour.</p>
           <div class="log-entry__details">
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Tools used</p>
-              <p class="log-entry__detail-val">GitHub + Vercel</p>
+              <p class="log-entry__detail-val">Claude, Claude Code, GitHub, Vercel</p>
             </div>
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Type</p>
-              <p class="log-entry__detail-val">Infrastructure / DevOps</p>
+              <p class="log-entry__detail-val">Product build / Infrastructure</p>
             </div>
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Time</p>
@@ -1197,11 +1293,11 @@
           </div>
           <div class="log-entry__outcome">
             <p class="log-entry__outcome-label">Outcome</p>
-            <p class="log-entry__outcome-text">Terra is live at <a href="https://terra-beige-mu.vercel.app" target="_blank">terra-beige-mu.vercel.app</a>, deployed from a private GitHub repo via Vercel's automatic deploy on push. The setup was intentionally quick — validate the design before investing in infrastructure. It worked.</p>
+            <p class="log-entry__outcome-text">A live URL, a working HTML page, and a connected deploy pipeline — all from scratch. The page wasn't much, but it proved the point: Claude Code can take a non-technical person from idea to live product, fast. GitHub and Vercel connected, automatic deploy on push working, the foundation in place.</p>
           </div>
           <div class="log-entry__insights">
             <p class="log-entry__insights-label">Key insights &amp; challenges</p>
-            <p class="log-entry__insights-text">Shipping something live — even bare minimum — changes how seriously you take the next step. Prototype first, then migrate. Validate the design before investing in infrastructure.</p>
+            <p class="log-entry__insights-text">Claude and Claude Code genuinely lower the barrier for non-technical people to build real products. Not prototypes, not mockups — actual deployed software with proper infrastructure. The recommendation to use GitHub and Vercel came unprompted; I wouldn't have known to ask. Shipping something live, even something simple, changes how seriously you take what comes next.</p>
           </div>
         </div>
       </div>
@@ -1230,9 +1326,9 @@
           <span class="tag">Portfolio</span>
           <span class="tag">Friction</span>
         </div>
-        <h3 class="log-entry__title">Building the AI lab page — and hitting the limits of Claude in the same session</h3>
+        <h3 class="log-entry__title">Setting up the AI Lab page — a public log to document building with AI</h3>
         <div class="log-entry__body">
-          <p class="log-entry__summary">Starting point: a brief description of intent and a link to my existing portfolio. Goal was to ship a visually cohesive, production-ready page that matches my existing aesthetic while solving a real information architecture problem — without opening Figma first. What followed was also an early lesson in how Claude handles instructions over a long session.</p>
+          <p class="log-entry__summary">Before building anything, I wanted a place to document the process in public. This session was about creating the AI Lab page itself — a portfolio sub-page that would serve as a running log of everything that followed. Starting point was a brief description of intent and a link to my existing portfolio. What followed was also an early lesson in how Claude handles instructions over a long session.</p>
           <div class="log-entry__details">
             <div class="log-entry__detail-cell">
               <p class="log-entry__detail-label">Tool used</p>
@@ -1249,7 +1345,7 @@
           </div>
           <div class="log-entry__outcome">
             <p class="log-entry__outcome-label">Outcome</p>
-            <p class="log-entry__outcome-text">Claude could not reliably extract exact color values or design tokens from the portfolio URL — the page had the right structure but colors were off. Once I defined a proper design system spec and fed it to Claude, alignment improved significantly. Later in the same session, instruction drift became a real problem: earlier rules quietly reverted as the conversation grew longer, creating a repetitive correction loop.</p>
+            <p class="log-entry__outcome-text">The AI Lab page was built and published — a live log to document everything that follows. Claude couldn't reliably extract exact color values or design tokens from the portfolio URL, so a proper design system spec had to be defined first before alignment improved. Later in the same session, instruction drift became a real problem: earlier rules quietly reverted as the conversation grew longer.</p>
           </div>
           <div class="log-entry__insights">
             <p class="log-entry__insights-label">Key insights &amp; challenges</p>
@@ -1270,29 +1366,29 @@
   </div>
   <div class="tools-grid">
     <div class="tool-card">
-      <p class="tool-role">Reasoning + Critique</p>
+      <p class="tool-role">Strategy + Reasoning</p>
       <p class="tool-name">Claude</p>
-      <p class="tool-desc">Design critique, research synthesis, prompt strategy, content generation, and planning. The thinking layer for every session.</p>
+      <p class="tool-desc">Design critique, product thinking, prompt strategy, and content generation. The primary thinking layer — used alongside Perplexity to shape decisions before anything gets built.</p>
+    </div>
+    <div class="tool-card">
+      <p class="tool-role">Deep Research</p>
+      <p class="tool-name">Perplexity</p>
+      <p class="tool-desc">Used for sourcing content claims, researching product categories, and advising on business decisions. Where Claude reasons, Perplexity retrieves — the two work in combination.</p>
     </div>
     <div class="tool-card">
       <p class="tool-role">Building + Code</p>
       <p class="tool-name">Claude Code</p>
-      <p class="tool-desc">Component and page generation in VS Code. The build step comes before Figma — code first, canvas second. Skills taught here compound across every future session.</p>
+      <p class="tool-desc">Component and page generation in VS Code. The build step — specifying what's needed and letting Claude Code handle the implementation, connected to Figma via MCP.</p>
     </div>
     <div class="tool-card">
-      <p class="tool-role">Hosting + Deploy</p>
-      <p class="tool-name">Vercel</p>
-      <p class="tool-desc">Every session ends with a live deploy. Vercel connects to GitHub and ships in seconds — no build step, no friction between building and seeing it live.</p>
+      <p class="tool-role">Version Control + Deploy</p>
+      <p class="tool-name">GitHub + Vercel</p>
+      <p class="tool-desc">GitHub for version control via GitHub Desktop. Vercel connected to the repo — every push deploys automatically, no build step needed.</p>
     </div>
     <div class="tool-card">
       <p class="tool-role">Design Intervention</p>
       <p class="tool-name">Figma</p>
       <p class="tool-desc">Everything starts in Claude. When Claude falls short on visual decisions — layout, interaction, feel — Figma is where I step in, draft what I actually want, and hand it back via MCP.</p>
-    </div>
-    <div class="tool-card" style="opacity: 0.45;">
-      <p class="tool-role">UI Iteration — Queued</p>
-      <p class="tool-name">Magic Patterns</p>
-      <p class="tool-desc">Will be introduced for variant exploration when the design system has a stable enough foundation to stress-test against alternatives.</p>
     </div>
     <div class="tool-card" style="opacity: 0.45;">
       <p class="tool-role">Analytics — Queued</p>
@@ -1316,7 +1412,7 @@
 <script>
   // Entry counter
   const count = document.getElementById('challenge-count');
-  if (count) count.textContent = String(document.querySelectorAll('.log-entry').length).padStart(2, '0');
+  if (count) count.textContent = '09';
 
   // Expand newest 3 entries by default (first 3 in DOM = newest)
   const allEntries = Array.from(document.querySelectorAll('.log-entry'));
