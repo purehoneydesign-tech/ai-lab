@@ -891,6 +891,162 @@
 
   <div class="entries-list">
 
+    <!-- ENTRY 012 — newest -->
+    <article class="log-entry" data-state="closed">
+      <div class="log-entry__meta">
+        <span class="log-entry__num">#012</span>
+        <span class="log-entry__date-val">September 2026</span>
+      </div>
+      <button class="log-entry__toggle-mobile log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+      <div class="log-entry__content">
+        <div class="log-entry__desktop-bar">
+          <div class="log-entry__tags-row">
+            <span class="tag accent">Validation</span>
+            <span class="tag">User Testing</span>
+            <span class="tag">Claude</span>
+            <span class="tag">Notion</span>
+          </div>
+          <button class="log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+        </div>
+        <div class="log-entry__mobile-tags">
+          <span class="tag accent">Validation</span>
+          <span class="tag">User Testing</span>
+          <span class="tag">Claude</span>
+          <span class="tag">Notion</span>
+        </div>
+        <h3 class="log-entry__title">First-wave usability testing — five users, a live MVP, and what actually needs fixing</h3>
+        <div class="log-entry__body">
+          <p class="log-entry__summary">Five usability sessions on the live product with people at different levels of sustainability engagement. Not a controlled lab — they used the real app and gave unfiltered feedback. I wanted to know: does the product create value in a first session, and would someone come back? Analytics are connected and usability testing done — but I'm still figuring out what else is needed to properly understand whether the product is actually working.</p>
+          <div class="log-entry__details">
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Tools used</p>
+              <p class="log-entry__detail-val">Claude, Notion, PostHog, meineterra.de</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Type</p>
+              <p class="log-entry__detail-val">Validation / Usability Testing</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Time</p>
+              <p class="log-entry__detail-val">Two weeks</p>
+            </div>
+          </div>
+          <div class="log-entry__outcome">
+            <p class="log-entry__outcome-label">Outcome</p>
+            <p class="log-entry__outcome-text">Four of five participants connected with the problem statement unprompted. Two said they'd use it before shopping. One said they'd pay after a trial. Clear improvements to prioritise: less text, add images, surface German brand origin, add a save feature. Navigation worked — no one got lost. Home page headline changed from "Better everyday choices" to "Sustainable everyday choices" after one participant said the original felt slightly judgmental.</p>
+          </div>
+          <div class="log-entry__insights">
+            <p class="log-entry__insights-label">Key insights &amp; challenges</p>
+            <p class="log-entry__insights-text">Every participant skipped the explanatory text and went straight to the brand links. That's not a copy problem — it's a hierarchy problem. The links are the most valuable part of the page and they're not treated that way yet.<br><br>Two people independently asked whether the links were sponsored. Neither thought they were — they just wanted to be sure. The trust model is working, but the editorial independence statement needs to be visible earlier than a menu item.<br><br>One participant made a comment that reframed how I think about retention: some swaps are only useful once. You buy wool dryer balls, you never need that recommendation again. The product isn't useful every day — it's useful at the right moment.<br><br>Looking into further frameworks on how to better validate a product idea besides usability testing and connecting product analytics.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTRY 011 -->
+    <article class="log-entry" data-state="closed">
+      <div class="log-entry__meta">
+        <span class="log-entry__num">#011</span>
+        <span class="log-entry__date-val">September 2026</span>
+      </div>
+      <button class="log-entry__toggle-mobile log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+      <div class="log-entry__content">
+        <div class="log-entry__desktop-bar">
+          <div class="log-entry__tags-row">
+            <span class="tag accent">Onboarding</span>
+            <span class="tag">Content</span>
+            <span class="tag">Claude Code</span>
+            <span class="tag">Figma MCP</span>
+          </div>
+          <button class="log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+        </div>
+        <div class="log-entry__mobile-tags">
+          <span class="tag accent">Onboarding</span>
+          <span class="tag">Content</span>
+          <span class="tag">Claude Code</span>
+          <span class="tag">Figma MCP</span>
+        </div>
+        <h3 class="log-entry__title">Fixing the onboarding flow, correcting fabricated content, and shipping the MVP</h3>
+        <div class="log-entry__body">
+          <p class="log-entry__summary">The onboarding flow wasn't behaving — Claude Code kept interpreting the brief loosely and producing something different from what was designed. Building the flow properly in Figma first and feeding it to Claude Code via MCP resolved it. The MVP is now live at <a href="https://meineterra.de" target="_blank" style="color: var(--accent); text-decoration: none; border-bottom: 1px solid var(--accent-border);">meineterra.de</a>. Alongside that, a long content correction pass — Claude had fabricated brand names, descriptions, and source links that returned 404 errors, which had to be found and fixed manually over several days.</p>
+          <div class="log-entry__details">
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Tools used</p>
+              <p class="log-entry__detail-val">Claude, Claude Code, Figma, Figma MCP</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Type</p>
+              <p class="log-entry__detail-val">Onboarding / Content / Build</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Time</p>
+              <p class="log-entry__detail-val">Multiple sessions</p>
+            </div>
+          </div>
+          <div class="log-entry__outcome">
+            <p class="log-entry__outcome-label">Outcome</p>
+            <p class="log-entry__outcome-text">Three-screen onboarding flow live — consent, welcome, legal acceptance. Persistent navigation menu added. Content corrected across multiple categories — 404 links fixed, fabricated content removed. No good automated workflow for catching fabricated content exists yet.</p>
+          </div>
+          <div class="log-entry__insights">
+            <p class="log-entry__insights-label">Key insights &amp; challenges</p>
+            <p class="log-entry__insights-text">Claude Code needs very detailed prompts and constant human review. Even with skills installed, Figma MCP connected, and careful prompting, it still deviates — adds things that weren't asked for, interprets brief descriptions in its own way, makes visual decisions that weren't sanctioned. It's not an independent tool. Every decision still comes from me; Claude Code is there to execute, not to judge. That distinction matters more the further into the product you get.<br><br>Claude also fabricates content confidently. Asking it to audit its own output before finalising caught some of it — but not all. The rest took manual checking across multiple sessions. I still don't have a good workflow for this, and it's a real gap.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- ENTRY 010 -->
+    <article class="log-entry" data-state="closed">
+      <div class="log-entry__meta">
+        <span class="log-entry__num">#010</span>
+        <span class="log-entry__date-val">September 2026</span>
+      </div>
+      <button class="log-entry__toggle-mobile log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+      <div class="log-entry__content">
+        <div class="log-entry__desktop-bar">
+          <div class="log-entry__tags-row">
+            <span class="tag accent">Compliance</span>
+            <span class="tag">Analytics</span>
+            <span class="tag">Infrastructure</span>
+            <span class="tag">Localisation</span>
+          </div>
+          <button class="log-entry__toggle-btn" aria-expanded="false">+ Expand</button>
+        </div>
+        <div class="log-entry__mobile-tags">
+          <span class="tag accent">Compliance</span>
+          <span class="tag">Analytics</span>
+          <span class="tag">Infrastructure</span>
+          <span class="tag">Localisation</span>
+        </div>
+        <h3 class="log-entry__title">Analytics, GDPR compliance, German localisation, and untangling GitHub branches</h3>
+        <div class="log-entry__body">
+          <p class="log-entry__summary">Releasing the product publicly meant complying with EU privacy laws — proper analytics, legal pages explaining how data is stored and used. A German version was needed too. And I'd been pushing changes to the wrong GitHub branch without realising it, which kept breaking things in ways that were hard to trace.</p>
+          <div class="log-entry__details">
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Tools used</p>
+              <p class="log-entry__detail-val">Claude, Claude Code, PostHog, Vercel, GitHub Desktop, Emailit, DeepL API</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Type</p>
+              <p class="log-entry__detail-val">Compliance / Analytics / Infrastructure / Localisation</p>
+            </div>
+            <div class="log-entry__detail-cell">
+              <p class="log-entry__detail-label">Time</p>
+              <p class="log-entry__detail-val">Multiple sessions</p>
+            </div>
+          </div>
+          <div class="log-entry__outcome">
+            <p class="log-entry__outcome-label">Outcome</p>
+            <p class="log-entry__outcome-text">PostHog live — analytics only fire after opt-in, own devices excluded, session replay with input masking. Privacy policy and cookie consent written and live. Feedback form connected to Emailit after Resend didn't qualify as an EU data processor. German version live via DeepL API, verified with native speakers. GitHub branches cleaned up — old ones deleted, active ones properly organised.</p>
+          </div>
+          <div class="log-entry__insights">
+            <p class="log-entry__insights-label">Key insights &amp; challenges</p>
+            <p class="log-entry__insights-text">Checking documentation before iterating saved hours — session replay was broken because of a specific PostHog limitation that only showed up in the docs, not through trial and error. Same with Resend: it looked fine until I read the actual data processing terms. Default choices need to be verified, not assumed.<br><br>Claude's German translation sounded plausible but wasn't. Only testing with real German speakers revealed how bad it was. AI output in a language you don't speak needs human verification — syntax checks don't catch comprehension problems.<br><br>The GitHub branch issue came from not having a clear mental model of how branching works. Once I understood it — each branch is a separate version of the code — cleaning it up was simple. The problem was the gap in understanding, not Git itself.</p>
+          </div>
+        </div>
+      </div>
+    </article>
+
     <!-- ENTRY 009 — newest -->
     <article class="log-entry" data-state="closed">
       <div class="log-entry__meta">
@@ -1412,7 +1568,7 @@
 <script>
   // Entry counter
   const count = document.getElementById('challenge-count');
-  if (count) count.textContent = '09';
+  if (count) count.textContent = '12';
 
   // Expand newest 3 entries by default (first 3 in DOM = newest)
   const allEntries = Array.from(document.querySelectorAll('.log-entry'));
